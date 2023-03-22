@@ -13,7 +13,6 @@ defmodule Bonfire.UI.Reflow.ResourceLive do
 
   alias Bonfire.UI.ValueFlows.FiltersLive
 
-  alias Bonfire.UI.Me.LivePlugs
   alias Bonfire.Me.Users
   alias Bonfire.UI.Me.CreateUserLive
 
@@ -21,20 +20,9 @@ defmodule Bonfire.UI.Reflow.ResourceLive do
 
   @recurse_limit 10
 
-  def mount(params, session, socket) do
-    # debug(pre_plugs: socket)
+  on_mount {LivePlugs, [Bonfire.UI.Me.LivePlugs.LoadCurrentUser]}
 
-    live_plug(params, session, socket, [
-      LivePlugs.LoadCurrentAccount,
-      LivePlugs.LoadCurrentUser,
-      Bonfire.UI.Common.LivePlugs.StaticChanged,
-      Bonfire.UI.Common.LivePlugs.Csrf,
-      Bonfire.UI.Common.LivePlugs.Locale,
-      &mounted/3
-    ])
-  end
-
-  defp mounted(%{"id" => id} = _params, _session, socket) do
+  def mount(%{"id" => id} = _params, _session, socket) do
     # debug(post_plugs: socket)
 
     resource = economic_resource(%{id: id}, socket)

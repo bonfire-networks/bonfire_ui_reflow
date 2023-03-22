@@ -13,24 +13,14 @@ defmodule Bonfire.UI.Reflow.ProcessLive do
 
   alias Bonfire.UI.ValueFlows.FiltersLive
 
-  alias Bonfire.UI.Me.LivePlugs
   alias Bonfire.Me.Users
   alias Bonfire.UI.Me.CreateUserLive
 
   # alias Bonfire.UI.Reflow.ResourceWidget
 
-  def mount(params, session, socket) do
-    live_plug(params, session, socket, [
-      LivePlugs.LoadCurrentAccount,
-      LivePlugs.LoadCurrentUser,
-      Bonfire.UI.Common.LivePlugs.StaticChanged,
-      Bonfire.UI.Common.LivePlugs.Csrf,
-      Bonfire.UI.Common.LivePlugs.Locale,
-      &mounted/3
-    ])
-  end
+  on_mount {LivePlugs, [Bonfire.UI.Me.LivePlugs.LoadCurrentUser]}
 
-  defp mounted(%{"id" => id} = _params, _session, socket) do
+  def mount(%{"id" => id} = _params, _session, socket) do
     {:ok,
      assign(
        socket,
