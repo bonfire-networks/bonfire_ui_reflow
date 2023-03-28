@@ -82,7 +82,7 @@
           <div class="mx-4 bg-base-100 border-gray-100 rounded-lg   lg:mx-0">
             <div class="flex items-center px-2 pt-3">
               <div class="flex-1 text-base font-semibold text-base-content opacity-60">{l("Material passport data")}</div>
-              <div x-on:click="open_passport_data = false"><Icon
+              <div x-on:click="open_passport_data = false"><#Icon
                   outline="X"
                   class="w-5 h-5 text-base-content opacity-60 cursor-pointer hover:text-base-content opacity-60"
                 /></div>
