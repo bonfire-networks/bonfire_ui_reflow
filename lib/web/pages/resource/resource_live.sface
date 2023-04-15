@@ -41,7 +41,7 @@
           id={"ra-" <> (e(event, :id, nil) || Pointers.ULID.generate())}
           activity={event}
           show_likes={false}
-          object_boundary={:skip}
+          object_boundary={:skip_boundary_check}
         />
       {/for}
     </div>
