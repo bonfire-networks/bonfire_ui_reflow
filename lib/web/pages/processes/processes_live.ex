@@ -18,7 +18,7 @@ defmodule Bonfire.UI.Reflow.ProcessesLive do
 
   # alias Bonfire.UI.Coordination.ResourceWidget
 
-  declare_extension("Reflow", icon: "twemoji:recycling-symbol", href: "/reflow")
+  declare_extension("Reflow", icon: "twemoji:recycling-symbol", emoji: "♻️", href: "/reflow")
 
   on_mount {LivePlugs, [Bonfire.UI.Me.LivePlugs.LoadCurrentUser]}
 
