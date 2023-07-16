@@ -38,7 +38,7 @@
     <div class="divide-y dark:divide-gray-600">
       {#for event <- e(@feed, [])}
         <Bonfire.UI.Social.ActivityLive
-          id={"ra-" <> (e(event, :id, nil) || Pointers.ULID.generate())}
+          id={"ra-" <> (e(event, :id, nil) || Text.random_string())}
           activity={event}
           show_likes={false}
           object_boundary={:skip_boundary_check}
