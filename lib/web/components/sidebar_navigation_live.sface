@@ -38,7 +38,7 @@
   <li>
     <LivePatch
       :if={current_user_id(@__context__)}
-      to={path(@current_user)}
+      to={path(current_user(@__context__))}
       class={
         "w-full flex items-center text-sm font-regular text-base-content focus:bg-primary",
         "hover:bg-primary bg-primary text-base-content  ": @page == "profile"
