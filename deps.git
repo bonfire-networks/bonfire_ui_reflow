@@ -5,7 +5,6 @@ bonfire_data_activity_pub="https://github.com/bonfire-networks/bonfire_data_acti
 bonfire_data_identity="https://github.com/bonfire-networks/bonfire_data_identity#main"
 bonfire_data_social="https://github.com/bonfire-networks/bonfire_data_social#main"
 # bonfire_web_phoenix = "https://github.com/bonfire-networks/bonfire_web_phoenix#main"
-pointers = "https://github.com/bonfire-networks/pointers#main"
 bonfire_ui_social="https://github.com/bonfire-networks/bonfire_ui_social#main"
 bonfire_ui_valueflows="https://github.com/bonfire-networks/bonfire_ui_valueflows#main"
 bonfire_valueflows="https://github.com/bonfire-networks/bonfire_valueflows#main"
