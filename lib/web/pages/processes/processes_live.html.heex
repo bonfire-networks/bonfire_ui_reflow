@@ -3,7 +3,7 @@
     <div class="">
       <div class="flex flex-col divide-y dark:divide-gray-600">
         <%= for process <- @processes do %>
-          <Bonfire.UI.Social.Activity.ProcessReflowLive.render
+          <Bonfire.UI.Reflow.Preview.ProcessReflowLive.render
             __context__={e(@__context__, %{})}
             object={process}
             showing_within={:process}
