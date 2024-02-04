@@ -7,7 +7,7 @@ defmodule Bonfire.UI.Reflow.ProfileInventoryLive do
 
   prop user, :map
   prop resources, :map
-  prop selected_tab, :string
+  prop selected_tab, :any
 
   slot header
 
