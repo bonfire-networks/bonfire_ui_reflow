@@ -4,7 +4,7 @@
   </li>
 
   <li>
-    <LivePatch
+    <LinkPatchLive
       to={~p"/processes"}
       class={
         "w-full flex items-center text-sm font-regular text-base-content focus:bg-primary",
@@ -32,11 +32,11 @@
         </svg>
       </span>
       <span class="text-sm font-semibold capitalize" id="navigation_profile">all processes</span>
-    </LivePatch>
+    </LinkPatchLive>
   </li>
 
   <li>
-    <LivePatch
+    <LinkPatchLive
       :if={current_user_id(@__context__)}
       to={path(current_user(@__context__))}
       class={
@@ -64,11 +64,11 @@
           /></svg>
       </span>
       <span class="text-sm font-semibold capitalize" id="navigation_profile">profile</span>
-    </LivePatch>
+    </LinkPatchLive>
   </li>
 
   <li>
-    <LivePatch
+    <LinkPatchLive
       to={~p"/inventory"}
       class={
         "w-full flex items-center text-sm font-regular text-base-content focus:bg-primary",
@@ -96,11 +96,11 @@
         </svg>
       </span>
       <span class="text-sm font-semibold capitalize" id="navigation_profile">My inventory</span>
-    </LivePatch>
+    </LinkPatchLive>
   </li>
 
   <li>
-    <LivePatch
+    <LinkPatchLive
       to={~p"/materials"}
       class={
         "w-full flex items-center text-sm font-regular text-base-content focus:bg-primary",
@@ -128,11 +128,11 @@
         </svg>
       </span>
       <span class="text-sm font-semibold capitalize" id="navigation_profile">all materials</span>
-    </LivePatch>
+    </LinkPatchLive>
   </li>
 
   <li>
-    <LivePatch
+    <LinkPatchLive
       to={~p"/reflow/map"}
       class={
         "w-full flex items-center text-sm font-regular text-base-content focus:bg-primary",
@@ -160,6 +160,6 @@
         </svg>
       </span>
       <span class="text-sm font-semibold capitalize" id="navigation_profile">Map</span>
-    </LivePatch>
+    </LinkPatchLive>
   </li>
 </ul>
