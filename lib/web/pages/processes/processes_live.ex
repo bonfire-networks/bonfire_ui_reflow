@@ -69,29 +69,9 @@ defmodule Bonfire.UI.Reflow.ProcessesLive do
     end
   end
 
-  def do_handle_event("load-more", params, socket) do
+  def handle_event("load-more", params, socket) do
     {:noreply,
      input_to_atoms(params)
      |> fetch(socket)}
   end
-
-  def handle_event(
-        action,
-        attrs,
-        socket
-      ),
-      do:
-        Bonfire.UI.Common.LiveHandlers.handle_event(
-          action,
-          attrs,
-          socket,
-          __MODULE__,
-          &do_handle_event/3
-        )
-
-  def handle_info(info, socket),
-    do: Bonfire.UI.Common.LiveHandlers.handle_info(info, socket, __MODULE__)
-
-  defdelegate handle_params(params, attrs, socket),
-    to: Bonfire.UI.Common.LiveHandlers
 end

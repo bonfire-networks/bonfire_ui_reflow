@@ -66,29 +66,9 @@ defmodule Bonfire.UI.Reflow.MapLive do
   end
 
   # proxy relevent events to the map component # FIXME
-  def do_handle_event("map_" <> _action = event, params, socket) do
+  def handle_event("map_" <> _action = event, params, socket) do
     debug(proxy_event: event)
     debug(proxy_params: params)
     Bonfire.Geolocate.MapLive.handle_event(event, params, socket, true)
   end
-
-  defdelegate handle_params(params, attrs, socket),
-    to: Bonfire.UI.Common.LiveHandlers
-
-  def handle_event(
-        action,
-        attrs,
-        socket
-      ),
-      do:
-        Bonfire.UI.Common.LiveHandlers.handle_event(
-          action,
-          attrs,
-          socket,
-          __MODULE__,
-          &do_handle_event/3
-        )
-
-  def handle_info(info, socket),
-    do: Bonfire.UI.Common.LiveHandlers.handle_info(info, socket, __MODULE__)
 end

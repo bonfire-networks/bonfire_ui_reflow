@@ -55,18 +55,4 @@ defmodule Bonfire.UI.Reflow.InventoryLive do
   """
   def agent_resources(params \\ %{}, socket),
     do: liveql(socket, :agent_resources, params)
-
-  def handle_event(
-        action,
-        attrs,
-        socket
-      ),
-      do:
-        Bonfire.UI.Common.LiveHandlers.handle_event(
-          action,
-          attrs,
-          socket,
-          __MODULE__
-          # &do_handle_event/3
-        )
 end
