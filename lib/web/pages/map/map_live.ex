@@ -69,6 +69,6 @@ defmodule Bonfire.UI.Reflow.MapLive do
   def handle_event("map_" <> _action = event, params, socket) do
     debug(proxy_event: event)
     debug(proxy_params: params)
-    Bonfire.Geolocate.MapLive.handle_event(event, params, socket, true)
+    Bonfire.Geolocate.MapLive.do_handle_event(event, params, socket, true)
   end
 end
