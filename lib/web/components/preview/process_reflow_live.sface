@@ -49,7 +49,7 @@
         <StatefulComponent
           module={maybe_component(Bonfire.UI.Reactions.LikeActionLive, @__context__)}
           id={ComponentID.new(Bonfire.UI.Reactions.LikeActionLive, id(@object), id(@activity))}
-          object_id={ulid(@object)}
+          object_id={uid(@object)}
         />
         <LinkLive to={~p"/process/" <> e(@object, :id, "")}>
           <div class="text-lg font-bold text-primary-content-700  hover:underline hover:text-primary-content-800">{@object.name}</div>
