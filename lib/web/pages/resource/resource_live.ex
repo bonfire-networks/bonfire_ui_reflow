@@ -135,7 +135,7 @@ defmodule Bonfire.UI.Reflow.ResourceLive do
   # def trace(params \\ %{}, socket), do: liveql(socket, :economic_resource, params)
 
   def handle_params(%{"tab" => "track"}, attrs, socket) do
-    resource = e(socket.assigns, :resource, nil)
+    resource = e(assigns(socket), :resource, nil)
 
     if resource do
       # resource = track(%{id: id}, socket)
@@ -152,7 +152,7 @@ defmodule Bonfire.UI.Reflow.ResourceLive do
   end
 
   def handle_params(_, attrs, socket) do
-    resource = e(socket.assigns, :resource, nil)
+    resource = e(assigns(socket), :resource, nil)
 
     if resource do
       # resource = trace(%{id: id}, socket)

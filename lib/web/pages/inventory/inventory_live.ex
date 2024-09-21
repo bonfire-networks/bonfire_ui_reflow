@@ -10,7 +10,7 @@ defmodule Bonfire.UI.Reflow.InventoryLive do
   on_mount {LivePlugs, [Bonfire.UI.Me.LivePlugs.LoadCurrentUser]}
 
   def mount(_params, _session, socket) do
-    resources = agent_resources(%{id: e(current_user(socket.assigns), :id, nil)}, socket)
+    resources = agent_resources(%{id: e(current_user(assigns(socket)), :id, nil)}, socket)
 
     # debug(Jason.encode!(resources))
     # debug(resources)

@@ -65,7 +65,7 @@ defmodule Bonfire.UI.Reflow.ProcessesLive do
            processes_pages(params, socket) do
       assign(
         socket,
-        processes: (e(socket.assigns, :processes, []) ++ processes) |> Enum.uniq(),
+        processes: (e(assigns(socket), :processes, []) ++ processes) |> Enum.uniq(),
         page_info: page_info
       )
     else
