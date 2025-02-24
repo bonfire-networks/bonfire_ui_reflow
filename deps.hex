@@ -3,8 +3,8 @@ faker = "~> 0.14" # fake data generation
 gettext = "~> 0.20"
 jason = "~> 1.0"
 recase = "~> 0.8" # string recasing
-telemetry_metrics = "~> 0.6.1"
-telemetry_poller = "~> 1.0.0"
+telemetry_metrics = "~> 1.0"
+telemetry_poller = "~> 1.1"
 # plugins
 # bonfire_data_access_control = "~> 0.1"
 # bonfire_data_activity_pub = "~> 0.1"
