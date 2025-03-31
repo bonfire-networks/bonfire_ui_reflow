@@ -38,7 +38,7 @@ defmodule Bonfire.UI.Reflow.ResourceLive do
        smart_input: false,
        # resource: "1234",
        resource: resource,
-       json: resource |> nested_structs_to_maps() |> Jason.encode!() |> IO.inspect(),
+       json: resource |> nested_structs_to_maps() |> Jason.encode!(),
        units: Bonfire.UI.Reflow.ProcessLive.units_for_select(socket)
      )}
   end
